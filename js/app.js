@@ -6003,6 +6003,10 @@ PERFORMANCE OF THIS SOFTWARE.
         }));
         let vh = window.innerHeight * .01;
         document.documentElement.style.setProperty("--vh", `${vh}px`);
+        window.addEventListener("resize", (() => {
+            let vh = window.innerHeight * .01;
+            document.documentElement.style.setProperty("--vh", `${vh}px`);
+        }));
         window["FLS"] = false;
         isWebp();
         menuInit();
