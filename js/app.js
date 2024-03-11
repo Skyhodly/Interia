@@ -6001,6 +6001,8 @@ PERFORMANCE OF THIS SOFTWARE.
             var el = document.querySelector(".contact-nav");
             if (width >= 768) el.setAttribute("data-goto-top", "140%"); else el.setAttribute("data-goto-top", "0%");
         }));
+        let vh = window.innerHeight * .01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`);
         window["FLS"] = false;
         isWebp();
         menuInit();
