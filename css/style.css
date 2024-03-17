@@ -652,7 +652,7 @@ body {
   }
 }
 .header {
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
@@ -677,7 +677,6 @@ body {
   z-index: 5
 }
 .header._header-scroll {
-  position: fixed;
   background-color: rgba(19,22,22,.9)
 }
 html.loaded .header {

@@ -4153,7 +4153,7 @@
             const startPoint = header.dataset.scroll ? header.dataset.scroll : 1;
             let scrollDirection = 0;
             let timer;
-            document.addEventListener("windowScroll", (function(e) {
+            function windowScroll() {
                 const scrollTop = window.scrollY;
                 clearTimeout(timer);
                 if (scrollTop >= startPoint) {
@@ -4169,7 +4169,9 @@
                     if (headerShow) header.classList.contains("_header-show") ? header.classList.remove("_header-show") : null;
                 }
                 scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
-            }));
+            }
+            document.addEventListener("scroll", windowScroll);
+            windowScroll();
         }
         setTimeout((() => {
             if (addWindowScrollEvent) {
